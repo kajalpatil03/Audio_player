@@ -1,0 +1,29 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:repeatCount="infinite"
+    android:fillAfter="true"> <!-- Keep the last frame visible -->
+
+    <!-- Scale the wave view to grow and shrink -->
+    <scale
+        android:fromXScale="1.0"
+        android:toXScale="1.5"
+        android:fromYScale="1.0"
+        android:toYScale="1.5"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="1000" />
+
+    <!-- Move the wave view up and down -->
+    <translate
+        android:fromYDelta="0%"
+        android:toYDelta="-15%"
+        android:duration="1000" />
+
+    <!-- Change alpha (opacity) to simulate flickering -->
+    <alpha
+        android:fromAlpha="1.0"
+        android:toAlpha="0.5"
+        android:duration="250"
+    android:repeatCount="infinite"
+    android:repeatMode="reverse" />
+</set>
